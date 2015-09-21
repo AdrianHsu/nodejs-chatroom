@@ -62,14 +62,12 @@
     
     #messages li {
         padding: 5px 10px;
-        border-bottom: solid 0.1px #ECECEC;
         font-size: 16pt;
         font-family: 'Noto Sans', Sans-serif;
     }
     
     #messages li:nth-child(odd) {
-        /*background: #eee; */
-        border-bottom: solid 0.1px #ECECEC;
+        background: #ECECEC; 
         font-family: 'Noto Sans', Sans-serif;
     }
 
@@ -95,7 +93,7 @@
 
         //監聽新訊息事件
         socket.on('chat message', function(data) {
-            appendMessage(data.username + "說: " + data.msg);
+            appendMessage(data.username + ": " + data.msg);
         });
 
         socket.on('add user', function(data) {
