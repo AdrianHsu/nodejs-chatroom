@@ -25,7 +25,7 @@
         position: absolute;
         bottom: 0;
         margin-bottom: 5px;
-        font-family: 'Josefin Slab', serif;
+        font-family: Sans-serif;
     }
     
     #send {
@@ -50,27 +50,27 @@
         margin-bottom: 10px;
         /*border: solid 2px black; */
         overflow: auto;
-        font-family: 'Josefin Slab', serif;
+        font-family: serif;
     }
     
     #messages {
         list-style-type: none;
         margin: 10px;
         padding: 0;
-        font-family: 'Josefin Slab', serif;
+        font-family:  serif;
     }
     
     #messages li {
         padding: 5px 10px;
         border-bottom: solid 0.1px #ECECEC;
         font-size: 16pt;
-        font-family: 'Josefin Slab', serif;
+        font-family: serif;
     }
     
     #messages li:nth-child(odd) {
         /*background: #eee; */
         border-bottom: solid 0.5px #ECECEC;
-        font-family: 'Josefin Slab', serif;
+        font-family: serif;
     }
 
     </style>
@@ -83,10 +83,10 @@
     var socket = io();
     $(document).ready(function() {
 
-        var name = prompt("請輸入暱稱", "guest");
+        var name = prompt("請輸入暱稱", "Guest");
 
         if (name == "" || name == null) {
-            name = "guest";
+            name = "Guest";
         }
 
         //tell server
