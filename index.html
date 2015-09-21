@@ -45,8 +45,8 @@
     #message_block {
         width: 100%;
         position: absolute;
-        top: 27px;
-        bottom: 5%;
+        top: 45px;
+        bottom: 150px;
         margin-bottom: 10px;
         /*border: solid 2px black; */
         overflow: auto;
@@ -84,7 +84,7 @@
     var socket = io();
     $(document).ready(function() {
 
-        var name = prompt("請輸入暱稱", "Guest");
+        var name = prompt("Hello, 請輸入暱稱", "Guest");
 
         if (name == "" || name == null) {
             name = "Guest";
@@ -95,7 +95,7 @@
 
         //監聽新訊息事件
         socket.on('chat message', function(data) {
-            appendMessage(data.username + ": " + data.msg);
+            appendMessage(data.username + "說: " + data.msg);
         });
 
         socket.on('add user', function(data) {
