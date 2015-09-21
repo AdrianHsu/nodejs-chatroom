@@ -70,7 +70,7 @@
     
     #messages li:nth-child(odd) {
         /*background: #eee; */
-        border-bottom: solid 0.5px gray;
+        border-bottom: solid 0.5px #ECECEC;
         font-family: 'Josefin Slab', serif;
     }
 
@@ -95,7 +95,7 @@
 
         //監聽新訊息事件
         socket.on('chat message', function(data) {
-            appendMessage(data.username + " :" + data.msg);
+            appendMessage(data.username + ": " + data.msg);
         });
 
         socket.on('add user', function(data) {
